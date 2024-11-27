@@ -6,6 +6,7 @@ import {
   TreeGridComponent,
 } from "@syncfusion/ej2-react-treegrid";
 import { sortData } from "./sampleData/data";
+import { realDataExample } from "./sampleData/moreData";
 
 registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 
@@ -14,7 +15,7 @@ function App() {
     <>
       <div>
         <h1>SyncFusion test Project</h1>
-        <p>TreeGridComponent</p>
+        <p>TreeGridComponent - Original Test Data from Docs</p>
         <div>
           <TreeGridComponent
             dataSource={sortData}
@@ -47,6 +48,29 @@ function App() {
                 textAlign="Right"
                 type="number"
                 format="C0"
+              />
+            </ColumnsDirective>
+          </TreeGridComponent>
+        </div>
+        <div style={{ margin: "50px" }}>Working Example of nested rows</div>
+        <div>
+          <TreeGridComponent
+            dataSource={realDataExample}
+            treeColumnIndex={0}
+            childMapping="subcategories"
+          >
+            <ColumnsDirective>
+              <ColumnDirective
+                field="mainName"
+                headerText="Category"
+                width="150"
+                textAlign="Left"
+              />
+              <ColumnDirective
+                field="orderName"
+                headerText="Name"
+                width="170"
+                textAlign="Left"
               />
             </ColumnsDirective>
           </TreeGridComponent>
