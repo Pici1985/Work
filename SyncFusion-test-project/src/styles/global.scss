@@ -1,6 +1,10 @@
 // src/styles/global.scss
 $primary-color: #3498db;
 
+:root {
+  --accent-solid: red; /* Define the custom property */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: $primary-color;

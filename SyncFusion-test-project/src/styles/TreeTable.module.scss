@@ -84,10 +84,12 @@
         border-color: var(--accent-solid) !important;
       }
 
+      //MARK: CHECK
       :global(.e-frame.e-check),
       :global(.e-css.e-checkbox-wrapper .e-frame.e-check) {
         background-color: var(--accent-solid) !important;
         border-color: var(--accent-solid) !important;
+        // border-color: #e3165b !important;
       }
 
       :global(.e-uncheck) {

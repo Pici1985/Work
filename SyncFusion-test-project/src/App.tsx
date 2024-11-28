@@ -60,6 +60,14 @@ function App() {
             treeColumnIndex={0}
             childMapping="subcategories"
             className={styles["data-grid__grid"]}
+            autoCheckHierarchy={true}
+            allowSelection={true}
+            selectionSettings={{
+              type: "Multiple",
+              persistSelection: true,
+              checkboxOnly: true,
+              mode: "Both",
+            }}
           >
             <ColumnsDirective>
               <ColumnDirective
