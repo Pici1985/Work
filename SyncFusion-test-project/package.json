@@ -14,7 +14,8 @@
     "@syncfusion/ej2-react-grids": "^27.2.4",
     "@syncfusion/ej2-react-treegrid": "^27.2.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sass": "^1.81.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

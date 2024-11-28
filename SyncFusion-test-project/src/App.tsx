@@ -7,6 +7,7 @@ import {
 } from "@syncfusion/ej2-react-treegrid";
 import { sortData } from "./sampleData/data";
 import { realDataExample } from "./sampleData/moreData";
+import styles from "./styles/TreeTable.module.scss";
 
 registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 
@@ -58,6 +59,7 @@ function App() {
             dataSource={realDataExample}
             treeColumnIndex={0}
             childMapping="subcategories"
+            className={styles["data-grid__grid"]}
           >
             <ColumnsDirective>
               <ColumnDirective
@@ -65,6 +67,7 @@ function App() {
                 headerText="Category"
                 width="150"
                 textAlign="Left"
+                showCheckbox={true}
               />
               <ColumnDirective
                 field="orderName"
