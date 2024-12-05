@@ -1,45 +1,68 @@
-export let realDataExample: Object[] = [
+export interface Item {
+  id: string;
+  mainName: string;
+  orderName: string;
+  checked: boolean;
+}
+
+export interface ChategoryItem {
+  id: string;
+  mainName: string;
+  orderName: string;
+  children: ChategoryItem[] | Item[];
+}
+
+export const transformedData: ChategoryItem[] = [
   {
     id: "DXPdg-5n4h",
     mainName: "Drinks",
-    subcategories: [
+    orderName: "-",
+    children: [
       {
         id: "H1oESo0neR",
         mainName: "Wine",
-        subcategories: [
+        orderName: "-",
+        children: [
           {
             id: "Fqn3lNx2U1",
             mainName: "White Wine",
-            subcategories: [
+            orderName: "-",
+            children: [
               {
                 id: "5RKUJbL-9g",
                 mainName: "Sauvignon Blanc",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "trjgbashO-",
-                    orderName: "Whatever Brand",
                     mainName: "New Zealand Sauvignon Blanc",
+                    orderName: "Whatever Brand",
+                    checked: false,
                   },
                   {
                     id: "frjgbashO-",
-                    orderName: "Another Brand",
                     mainName: "French Sauvignon Blanc",
+                    orderName: "Another Brand",
+                    checked: false,
                   },
                 ],
               },
               {
                 id: "5RKUJbL-9g",
                 mainName: "Chardonnay",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "trjgbashO-",
-                    orderName: "Chablis",
                     mainName: "New Zealand Chardonnay",
+                    orderName: "Chablis",
+                    checked: false,
                   },
                   {
                     id: "frjgbashO-",
-                    orderName: "Some other",
                     mainName: "French Chardonnay",
+                    orderName: "Some other",
+                    checked: false,
                   },
                 ],
               },
@@ -48,18 +71,24 @@ export let realDataExample: Object[] = [
           {
             id: "Fqn3lNx2U1",
             mainName: "Red Wine",
-            subcategories: [
+            orderName: "-",
+            children: [
               {
                 id: "5RKUJbL-9g",
                 mainName: "Cabernet Sauvignon",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "trjgbashO-",
                     mainName: "New Zealand Cabernet Sauvignon",
+                    orderName: "-",
+                    checked: false,
                   },
                   {
                     id: "frjgbashO-",
                     mainName: "French Cabernet Sauvignon",
+                    orderName: "-",
+                    checked: false,
                   },
                 ],
               },
@@ -70,36 +99,48 @@ export let realDataExample: Object[] = [
       {
         id: "XSErGz7OjA",
         mainName: "Beer",
-        subcategories: [
+        orderName: "-",
+        children: [
           {
             id: "YreqPjMxVo",
             mainName: "Draught",
-            subcategories: [
+            orderName: "-",
+            children: [
               {
                 id: "5.venHMifj",
                 mainName: "Pint",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "fdgkjhdf",
+                    mainName: "-",
                     orderName: "Heineken",
+                    checked: false,
                   },
                   {
                     id: "fdgkjhdsf",
+                    mainName: "-",
                     orderName: "Budweiser",
+                    checked: false,
                   },
                 ],
               },
               {
                 id: "5.venHMifj",
                 mainName: "Half Pint",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "fdgkjhdf",
+                    mainName: "-",
                     orderName: "Heineken",
+                    checked: false,
                   },
                   {
                     id: "fdgkjhdsf",
+                    mainName: "-",
                     orderName: "Budweiser",
+                    checked: false,
                   },
                 ],
               },
@@ -108,32 +149,43 @@ export let realDataExample: Object[] = [
           {
             id: "YreqPjMxVo",
             mainName: "Bottled",
-            subcategories: [
+            orderName: "-",
+            children: [
               {
                 id: "5.venHMifj",
                 mainName: "500ml",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "fdgffdkjhdf",
+                    mainName: "-",
                     orderName: "Staropramen",
+                    checked: false,
                   },
                   {
                     id: "fdgkfdfffjhdsf",
+                    mainName: "-",
                     orderName: "Heineken",
+                    checked: false,
                   },
                 ],
               },
               {
                 id: "5.venHMiffj",
                 mainName: "330ml",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "fdgkjdfdfdfhdf",
+                    mainName: "-",
                     orderName: "Leffe",
+                    checked: false,
                   },
                   {
                     id: "fdgkdsafdfdfdjhdsf",
+                    mainName: "-",
                     orderName: "Corona",
+                    checked: false,
                   },
                 ],
               },
@@ -146,27 +198,34 @@ export let realDataExample: Object[] = [
   {
     id: "xEiBAGV6lX",
     mainName: "Food",
-    subcategories: [
+    orderName: "-",
+    children: [
       {
         id: ".32NKjUyF4",
         mainName: "Mains",
-        subcategories: [
+        orderName: "-",
+        children: [
           {
             id: "aYPzQX6Oh3",
             mainName: "Steaks",
-            subcategories: [],
+            orderName: "-",
+            children: [],
           },
           {
             id: "k1B5TlJzaU",
             mainName: "Salads",
-            subcategories: [
+            orderName: "-",
+            children: [
               {
                 id: "RY7-lk1NYA",
                 mainName: "Salads",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "GtVGl1De55",
-                    mainName: "Salads",
+                    orderName: "Ceasar Salad",
+                    mainName: "-",
+                    checked: false,
                   },
                 ],
               },
@@ -177,29 +236,29 @@ export let realDataExample: Object[] = [
       {
         id: "H1dkj5tOLj",
         mainName: "Snacks",
-        subcategories: [
+        orderName: "-",
+        children: [
           {
             id: "ucnMGU29ll",
             mainName: "Chips",
-            subcategories: [
+            orderName: "-",
+            children: [
               {
                 id: "pfZD0GOwKw",
                 mainName: "Doritos",
-                subcategories: [
+                orderName: "-",
+                children: [
                   {
                     id: "v8sjSB6uW3",
-                    mainName: "Doritos",
+                    mainName: "-",
+                    orderName: "Doritos",
+                    checked: false,
                   },
                 ],
               },
             ],
           },
         ],
-      },
-      {
-        id: "dGPf9eS7Qx",
-        mainName: "Shared",
-        subcategories: [],
       },
     ],
   },

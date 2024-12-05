@@ -2,11 +2,34 @@
 $primary-color: #3498db;
 
 :root {
-  --accent-solid: red; /* Define the custom property */
+  --accent-solid: #11181c; /* Define the custom property */
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: $primary-color;
   color: #fff;
+}
+
+.e-grid .e-gridheader thead .e-icons:not(.e-icon-filter) {
+  display: none;
+}
+
+.e-checkbox-wrapper .e-frame,
+.e-css.e-checkbox-wrapper .e-frame {
+  border: 1px solid rgba(0, 0, 0, 0.87) !important;
+  border-radius: 4px !important;
+}
+
+.e-checkbox-wrapper .e-frame.e-check,
+.e-css.e-checkbox-wrapper .e-frame .e-check {
+  background-color: #006adc !important;
+  border: 1px solid #006adc !important;
+}
+
+.e-checkbox-wrapper .e-frame.e-stop,
+.e-css.e-checkbox-wrapper .e-frame .e-check {
+  background-color: #006adc !important;
+  border: 1px solid #006adc !important;
+  color: white !important;
 }

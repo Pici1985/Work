@@ -1,4 +1,4 @@
-export let realDataExample: Object[] = [
+export const originalData: Object[] = [
   [
     {
       id: "DXPdg-5n4h",
